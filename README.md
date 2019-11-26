@@ -64,7 +64,9 @@ Capstone Data
 ## **Preprocessing**  
 ### N4 Bias Field Correction
 ### Skull Stripping
-![](assets/README-8c2d4b24.png =100x20)
+<img src="assets/README-8c2d4b24.png" width="500" height="250"/>  
+
+![](assets/README-8c2d4b24.png)
 ![](assets/README-96519894.png)
 ![](assets/README-de0309e1.png)
 
