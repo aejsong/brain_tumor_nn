@@ -58,15 +58,25 @@ Capstone Data
 
 ## **Repository Contents**
 - `README.md`
+- `assets`: Folder containing `.png` contents required for `README.md`
+- `pickles`: various `.h5` files from different models that were fitted
 -  [`01 - Image Data & Preprocessing.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/01%20-%20Image%20Data%20%26%20Preprocessing.ipynb)
 -  [`02 - Modeling.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/02%20-%20Modeling.ipynb)
 
 ## **Preprocessing**  
 ### N4 Bias Field Correction
-### Skull Stripping
+### Skull Stripping  
+After Bias Field Correction, Skull Stripping was performed on every image. Since we are detecting brain tumors, we only need to focus on the brain and will therefore remove the skull from MRI images. Doing this will help eliminate noise in our model.  
+
 <img src="assets/README-8c2d4b24.png" width="600" height="250"/>  
+The image above shows an original MRI image of a brain.  
+<br>  
+<br>
 <img src="assets/README-96519894.png" width="600" height="250"/>   
-<img src="assets/README-de0309e1.png" width="600" height="250"/> 
+The image above shows the same original MRI image post skull-strip.  
+<!-- <br>
+<br>
+<img src="assets/README-de0309e1.png" width="600" height="250"/>  -->
 
 ## **Executive Summary**
 ## **Conclusions & Recommendations**
