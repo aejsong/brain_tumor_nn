@@ -1,7 +1,7 @@
 # **Brain Tumor Segmentation & Classification**
 
 ## **Problem Statement**
-This project aims to segment brain tumors from MRI scans acquired from the BraTS2019 competition using neural networks.  
+This project aims to classify brain tumors from MRI scans acquired from the BraTS2019 competition using neural networks.  
 
 ## **Requirements**  
 - `antspyx == 0.2.2`
@@ -65,6 +65,16 @@ Capstone Data
 
 ## **Preprocessing**  
 ### N4 Bias Field Correction
+Various MRI scanners have various intensities. The possibility of varying intensities for all MRI scans needs to be accounted for. Correcting bias field will alter the intensities of each MRI scan and ensure each respective part of the brain is represented by the same intensity.
+
+
+![](assets/README-bbc81d2a.png)  
+The image above shoes and original MRI image of a brain.
+<br>
+<br>
+![](assets/README-04ac4114.png)  
+The image above shoes the same original MRI image after bias-field correction.
+
 ### Skull Stripping  
 After Bias Field Correction, Skull Stripping was performed on every image. Since we are detecting brain tumors, we only need to focus on the brain and will therefore remove the skull from MRI images. Doing this will help eliminate noise in our model.  
 
