@@ -58,7 +58,7 @@ Capstone Data
 ## **Repository Contents**
 - `README.md`
 - `assets`: Folder containing `.png` contents required for `README.md`
-- `pickles`: various `.h5` files from different models that were fitted
+- `pickles`: various `.h5` files from different models that were fitted (too large to be pushed up to GitHub, unsure of what to do)
 -  [`01 - Image Data & Preprocessing.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/01%20-%20Image%20Data%20%26%20Preprocessing.ipynb)
 -  [`02 - Modeling.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/02%20-%20Modeling.ipynb)
 
