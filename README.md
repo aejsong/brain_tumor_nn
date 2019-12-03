@@ -1,7 +1,7 @@
 # **Brain Tumor Segmentation & Classification**
 
 ## **Problem Statement**
-This project aims to utilize 3D convolutional neural networks to classify high-grade gliomas and low-grade gliomas, also known as brain tumors, from 3D MRI scans acquired from the BraTS2019 competition.
+This project aims to utilize 3D convolutional neural networks to classify high-grade gliomas (HGG) and low-grade gliomas (LGG), also known as brain tumors, from 3D MRI scans acquired from the BraTS2019 competition.
 
 ## **Requirements**  
 - `antspyx == 0.2.2`
@@ -92,7 +92,7 @@ The goal of this project is to successfully classify between high-grade gliomas 
 
 3D MRI data was acquired through the BraTS2019 competition. Steps needed to acquire the data included signing up through the BraTS2019 competition and requesting data. BraTS2019 Admin then had to approve my account and approve my data request. This is a manual process that took about 2 to 3 days.  
 
-The predictions of the model were measured of accuracy and loss. A very simple model that took about 40 hours to fit on my personal computer returned an accuracy of about 78% for validation data and 81% on training data with a loss of 0.55.
+The predictions of the model were measured against accuracy and loss. A very simple model that took about 40 hours to fit on my personal computer returned an accuracy of about 78% for validation data and 81% on training data with a loss of 0.55.
 
 Further improvements to the neural network are made through Google Cloud Compute Engine. The final best model for this project has an accuracy of **INSERT BEST MODEL ACCURACY HERE** with a loss of **INSERT BEST MODEL LOSS HERE**
 ## **Conclusions & Recommendations**
