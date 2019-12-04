@@ -1,0 +1,9 @@
+# Code below to see if tensorflow-gpu successfully installed and detecting GPUs
+# Run code below in Python
+
+# My VM Instances were showing XLA_GPUs -- Keras cannot run multi_gpu_model on XLA_GPUs...need to figure out why GCE's GPUs are being read as XlA_GPUs.
+# XLA_GPUs detected for both NVIDIA Tesla T4 GPUs and NVIDIA K80 GPUs.
+
+import tensorflow as tf
+from tensorflow.python.client import device_lib
+print(device_lib.list_local_devices())
