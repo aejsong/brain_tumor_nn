@@ -129,6 +129,9 @@ In an attempt to use GCP's NVIDIA T4 and NVIDIA K80 GPUs on my VM Instance, CUDA
 
 The best library used for skull stripping at this moment is ROBEX. However ROBEX is currently only used in R. It is recommended to try this project again in R.
 
+Another recommendation is to try registration as a part of the preprocessing steps. This aligns objects across images and allows for direct comparisons.
+
+U-Net convolutional network architecture is currently known as the best performing method for segmenting biomedical images. Doing more research on this and implementing it would prove to be useful.
 
 
 
@@ -142,3 +145,23 @@ The best library used for skull stripping at this moment is ROBEX. However ROBEX
 [4] S. Bakas, H. Akbari, A. Sotiras, M. Bilello, M. Rozycki, J. Kirby, et al., "Segmentation Labels and Radiomic Features for the Pre-operative Scans of the TCGA-GBM collection", The Cancer Imaging Archive, 2017. DOI: 10.7937/K9/TCIA.2017.KLXWJJ1Q
 
 [5] S. Bakas, H. Akbari, A. Sotiras, M. Bilello, M. Rozycki, J. Kirby, et al., "Segmentation Labels and Radiomic Features for the Pre-operative Scans of the TCGA-LGG collection", The Cancer Imaging Archive, 2017. DOI: 10.7937/K9/TCIA.2017.GJQ7R0EF
+
+[6] https://www.medicalnewstoday.com/articles/146309.php#faqs  
+
+[7] https://www.radiologymasterclass.co.uk/tutorials/mri/t1_and_t2_images  
+
+[8] https://casemed.case.edu/clerkships/neurology/Web%20Neurorad/MRI%20Basics.htm  
+
+[9] https://towardsdatascience.com/deep-learning-with-magnetic-resonance-and-computed-tomography-images-e9f32273dcb5  
+
+[10] Alex Chung, Medical Resident, David Geffen School of Medicine at UCLA  
+
+[11] https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/  
+
+[12] https://medium.com/datadriveninvestor/complete-step-by-step-guide-of-keras-transfer-learning-with-gpu-on-google-cloud-platform-ed21e33e0b1d  
+
+[13] https://towardsdatascience.com/running-jupyter-notebook-in-google-cloud-platform-in-15-min-61e16da34d52  
+
+[14] https://cloud.google.com/storage/docs/how-to
+
+[15] https://medium.com/@aerikasong/a-learning-experience-neural-networks-brain-tumor-segmentation-part-i-948ef0c49d56
