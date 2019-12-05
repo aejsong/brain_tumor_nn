@@ -1,5 +1,7 @@
 # **Brain Tumor Segmentation & Classification**
 
+## [**Presentation Slides**](https://docs.google.com/presentation/d/1fddP7CkNIsWqIaxqQ6s_NdO_wvzNVAePWthf8PDlBIU/edit?usp=sharing)
+
 ## **Problem Statement**
 This project aims to utilize 3D convolutional neural networks to classify high-grade gliomas (HGG) and low-grade gliomas (LGG), also known as brain tumors, from 3D MRI scans acquired from the BraTS2019 competition.
 
