@@ -115,10 +115,10 @@ Scores:
 
 The model does not seem to be overfitting. No regularization techniques have been implemented because it is not needed at this point. If regularization techniques are implemented later on, I would try to avoid using dropout due to the small sample size.
 
-![](assets/t1_t2_loss.png)
+![](assets/t1_t2_loss.png)  
 The graph above shows the training and testing loss at each epoch. After the first epoch, the loss scores are decreasing for both the training and testing data.  
 
-![](assets/t1_t2_acc.png)
+![](assets/t1_t2_acc.png)  
 The graph above shows the training and testing accuracy at each epoch. After the first epoch, the accuracy scores are increasing for both the training and testing data.
 
 **Advanced Modeling**:  
