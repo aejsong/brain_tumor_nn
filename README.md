@@ -56,11 +56,12 @@ Capstone Data
 
 
 ## **Repository Contents**
-- `README.md`
 - `assets`: Folder containing `.png` contents required for `README.md`
-- `pickles`: various `.h5` files from different models that were fitted (too large to be pushed up to GitHub, unsure of what to do)
+- `shellscripts`: Folder containing `.sh` and `.txt` files to configure VM Instances that uses GPUs and VM Instances that only use CPUs.
+<!-- - `pickles`: various `.h5` files from different models that were fitted (too large to be pushed up to GitHub, unsure of what to do) -->
 -  [`01 - Image Data & Preprocessing.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/01%20-%20Image%20Data%20%26%20Preprocessing.ipynb)
 -  [`02 - Modeling.ipynb`](https://github.com/aejsong/brain_tumor_nn/blob/master/02%20-%20Modeling.ipynb)
+- `README.md`
 
 ## **Preprocessing**  
 ### N4 Bias Field Correction
@@ -87,16 +88,50 @@ The image above shows the same original MRI image post skull-strip.
 <br>
 <img src="assets/README-de0309e1.png" width="600" height="250"/>  -->
 
+
+
 ## **Executive Summary**  
 The goal of this project is to successfully classify between high-grade gliomas (HGG) and low-grade gliomas (LGG) using 3D-Image Classification through neural networks.  
 
 3D MRI data was acquired through the BraTS2019 competition. Steps needed to acquire the data included signing up through the BraTS2019 competition and requesting data. BraTS2019 Admin then had to approve my account and approve my data request. This is a manual process that took about 2 to 3 days.  
 
-The predictions of the model were measured against accuracy and loss. A very simple model that took about 40 hours to fit on my personal computer returned an accuracy of about 78% for validation data and 81% on training data with a loss of 0.55.
+The predictions of the model were measured against accuracy and loss. A very simple model that took about 40 hours to fit on my personal computer returned an accuracy of about 77% for validation data and 81% on training data with a loss of 0.51 for training data and 0.94 for validation data.
 
-Further improvements to the neural network are made through Google Cloud Compute Engine. The final best model for this project has an accuracy of **INSERT BEST MODEL ACCURACY HERE** with a loss of **INSERT BEST MODEL LOSS HERE**
+Further improvements to the neural network are made through Google Cloud Compute Engine. The final best model for this project has an accuracy of **0.7725** for training data, **0.7725** for validation data, with a loss of **0.6819** for training data and **0.6788** for validation data.
 ## **Conclusions & Recommendations**
-**INSERT CONCLUSIONS ABOUT FINAL MODEL HERE**
+The best model produced from running on Google Cloud Platform's 4CPUs/256GB RAM VM Instance:  
+- T1 and T2 MRI 3D images
+- 2 Conv3D layers
+- 1 Dense layer
+- 3 epochs   
+
+Scores:  
+
+|Model|Train Loss|Test Loss|Train Accuracy|Test Accuracy|
+| --- | --- | --- | --- | --- |
+|T1 MRI 3D Images| 0.5137|0.9381|0.8120|0.7738|  
+|T1 & T2 MRI 3D Images| 0.6819|0.6788|0.7725|0.7725|  
+|T1, T1ce, T2, FLAIR MRI 3D Images| TBD: Hardware Limitation|TBD: Hardware Limitation|TBD: Hardware Limitation|TBD: Hardware Limitation|  
+
+The model does not seem to be overfitting. No regularization techniques have been implemented because it is not needed at this point. If regularization techniques are implemented later on, I would try to avoid using dropout due to the small sample size.
+
+![](assets/t1_t2_loss.png)
+The graph above shows the training and testing loss at each epoch. After the first epoch, the loss scores are decreasing for both the training and testing data.  
+
+![](assets/t1_t2_acc.png)
+The graph above shows the training and testing accuracy at each epoch. After the first epoch, the accuracy scores are increasing for both the training and testing data.
+
+**Advanced Modeling**:  
+
+In an attempt to use GCP's NVIDIA T4 and NVIDIA K80 GPUs on my VM Instance, CUDA and NVIDIA configurations/installations were detecting my GPUs as XLA_GPUs and were unable to be used with Keras's `multi_gpu_model` method. Due to this complication, running complex neural networks and introducing other types of 3D MRI images would have taken weeks on the instance to run without GPUs. Further research and debugging is currently ongoing to improve my models using GPUs.  
+
+**Recommendations**:  
+
+The best library used for skull stripping at this moment is ROBEX. However ROBEX is currently only used in R. It is recommended to try this project again in R.
+
+
+
+
 ## **Sources**
 [1] B. H. Menze, A. Jakab, S. Bauer, J. Kalpathy-Cramer, K. Farahani, J. Kirby, et al. "The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS)", IEEE Transactions on Medical Imaging 34(10), 1993-2024 (2015) DOI: 10.1109/TMI.2014.2377694
 
