@@ -1,0 +1,8 @@
+# configurations for jupyter_notebook_config.py
+
+c = get_config()
+c.NotebookApp.ip = '*'
+c.NotebookApp.open_browser = False
+
+# Port number is set under Firewall Settings on Google Cloud Platform
+c.NotebookApp.port = 5000
